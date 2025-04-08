@@ -29,12 +29,12 @@ public class Restaurants {
 	public void foodDeliveryPage() {
 
 		try {
-			Thread.sleep(5000);
+
+			//Thread.sleep() is used to pause the execution temporarily, which helps in observing the flow of the web page more easily. However, it is generally recommended to use one of the three types of waits available in Selenium for better efficiency and reliability: Implicit Wait, Explicit Wait, and Fluent Wait.
+                        Thread.sleep(5000);
 			WebElement searchrestaurants = driver
 					.findElement(By.xpath("//input[@placeholder=\"Search for restaurants...\"]"));
 			searchrestaurants.sendKeys("Swaniawski and Sons");
-
-			//Thread.sleep() is used to pause the execution temporarily, which helps in observing the flow of the web page more easily. However, it is generally recommended to use one of the three types of waits available in Selenium for better efficiency and reliability: Implicit Wait, Explicit Wait, and Fluent Wait.
 			Thread.sleep(3000);
 			WebElement clickOnSwaniawskiRestaurant = driver.findElement(By.xpath("//h2[contains(text(),\"Swaniawski and Sons\")]"));
 			clickOnSwaniawskiRestaurants.click();
